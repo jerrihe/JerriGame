@@ -1,0 +1,17 @@
+Network:
+    ClientService: "192.168.31.97:9016"
+RelationService:
+    # 服务名字: 地址列表，服务名字要跟 protocol/ss/ss_type.proto:ServiceType 一一对应 
+    RouterSvr: ["192.168.31.97:8003"]
+Redis:
+    Addr: "192.168.31.97:6379"
+    Port: 6379
+    Password: "123456"
+    DB: 0
+    MaxIdle: 10
+    MaxActive: 100
+    IdleTimeout: 240
+    ConnTimeout: 1000
+    ReadTimeout: 1000
+ServerInfo:
+    ServerID: 15

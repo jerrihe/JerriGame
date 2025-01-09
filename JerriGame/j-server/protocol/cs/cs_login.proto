@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option go_package = "./;cs";
+
+package cs;
+
+// 登录请求
+message CsCmdLoginReq {
+    string user = 1;
+    string platform = 2;
+};
+
+// 登录响应
+message CsCmdLoginRes {
+    string user = 1;
+    string platform = 2;
+    uint64 account_id = 3;
+};
+
+// 登出请求
+message CsCmdLoginOutReq {
+    uint64 account_id = 1;
+};
+
+// 登出响应
+message CsCmdLoginOutRes {
+    uint64 account_id = 1;
+};
+
+// 创建账号请求
+message CsCmdCreateAccountReq {
+    string user = 1;
+    string platform = 2;
+};
+
+// 创建账号响应
+message CsCmdCreateAccountRes {
+    string user = 1;
+    string platform = 2;
+    uint64 account_id = 3;
+};
+
+// 踢人通知
+message CsCmdNtfKickAccount {
+    uint64 account_id = 1;
+    int32 reason = 2;
+};

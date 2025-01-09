@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "./;ss";
+
+package ss;
+
+// 消息头
+message SsHead {
+    int32 cmd = 1;
+    int32 seq = 2;
+    int32 ret = 3;
+    int32 server_id = 4;
+    int32 target_server_id = 5;
+}
+
+// 消息包
+message SsPkg {
+    SsHead head = 1;
+    bytes body = 2;
+}

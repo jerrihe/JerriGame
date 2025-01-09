@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS `JAccount` (
+	`UserId` VARCHAR(128),
+	`Platform` VARCHAR(128),
+	`AccId` BIGINT UNSIGNED,
+	`CreateAt` BIGINT SIGNED,
+	PRIMARY KEY(`AccId`),
+	INDEX `UserId_PlatType_index` (`UserId`,`Platform`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `JPlayer` (
+	`AccId` BIGINT UNSIGNED,
+	`CreateAt` BIGINT SIGNED,
+	PRIMARY KEY(`AccId`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4 COLLATE=utf8mb4_unicode_ci;
+

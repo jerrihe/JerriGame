@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "./;cs";
+
+package cs;
+
+enum CS_CMD {
+    UNKNOWN = 0;
+
+    LOGIN_REQ = 1;              // 登录请求
+    LOGIN_RES = 2;              // 登录响应   
+    LOGIN_OUT_REQ = 3;          // 登出请求
+    LOGIN_OUT_RES = 4;          // 登出响应
+    CREATE_ACCOUNT_REQ = 5;     // 创建账号请求
+    CREATE_ACCOUNT_RES = 6;     // 创建账号响应
+    NTF_KICK_ACCOUNT = 7;       // 踢人通知
+
+
+    // 错误码通知
+    NTF_ERROR_CODE = 101;
+
+    //场景
+    SCENE_ENTER_REQ = 201;      // 进入场景请求
+    SCENE_ENTER_RES = 202;      // 进入场景响应
+    SCENE_LEAVE_REQ = 203;      // 离开场景请求
+    SCENE_LEAVE_RES = 204;      // 离开场景响应
+    SCENE_NTF_ENTER = 205;      // 通知进入场景
+    SCENE_NTF_LEAVE = 206;      // 通知离开场景
+    SCENE_NTF_MOVE = 207;       // 通知移动
+    SCENE_MOVE_REQ = 208;       // 移动
+    SCENE_MOVE_RES = 209;       // 移动
+};

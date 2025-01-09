@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option go_package = "./;ss";
+
+package ss;
+
+// SS_CMD_KICK_ACCOUNT_REQ = 1;
+message SsCmdKickAccountReq {
+    string user = 1;
+    string platform = 2;
+    int32 reason = 3;
+    uint64 conn_idx = 4;
+}
+
+// SS_CMD_KICK_ACCOUNT_RES = 2;
+message SsCmdKickAccountRes {
+    string user = 1;
+    string platform = 2;
+    int32 reason = 3;
+    uint64 conn_idx = 4;
+}
+
+// SS_CMD_REGISTER_SERVER_REQ = 3;
+message SsCmdRegisterServerReq {
+    int32 server_id = 1;
+    string server_type = 2;
+    string server_ip = 3;
+    int32 server_port = 4;
+    string server_name = 5;
+    string server_desc = 6;
+    string server_version = 7;
+    string server_key = 8;
+}
+
+// SS_CMD_REGISTER_SERVER_RES = 4;
+message SsCmdRegisterServerRes {
+    string server_id = 1;
+    string server_type = 2;
+    string server_ip = 3;
+    int32 server_port = 4;
+    string server_name = 5;
+    string server_desc = 6;
+    string server_version = 7;
+    string server_key = 8;
+    int32 result = 9;
+    string reason = 10;
+}

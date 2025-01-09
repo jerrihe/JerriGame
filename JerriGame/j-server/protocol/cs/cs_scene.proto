@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+option go_package = "./;cs";
+
+package cs;
+
+// SCENE_ENTER_REQ = 201;      // 进入场景请求
+message CsCmdSceneEnterReq {
+    uint32 map_id = 1;
+    uint32 scene_id = 2;
+};
+
+// SCENE_ENTER_RES = 202;      // 进入场景响应
+message CsCmdSceneEnterRes {
+    uint32 map_id = 1;
+    uint32 scene_id = 2;
+    uint32 pos_x = 3;
+    uint32 pos_y = 4;
+};
+
+// SCENE_LEAVE_REQ = 203;      // 离开场景请求
+message CsCmdSceneLeaveReq {
+    uint32 map_id = 1;
+    uint32 scene_id = 2;
+};
+
+// SCENE_LEAVE_RES = 204;      // 离开场景响应
+message CsCmdSceneLeaveRes {
+    uint32 map_id = 1;
+    uint32 scene_id = 2;
+};
+
+// SCENE_NTF_ENTER = 205;      // 通知进入场景
+message CsCmdSceneNtfEnter {
+    repeated uint64 account_id = 1;
+    uint32 map_id = 2;
+    uint32 scene_id = 3;
+    uint32 x = 4;
+    uint32 y = 5;
+};
+
+// SCENE_NTF_LEAVE = 206;      // 通知离开场景
+message CsCmdSceneNtfLeave {
+    repeated uint64 account_id = 1;
+    uint32 map_id = 2;
+    uint32 scene_id = 3;
+};
+
+// SCENE_NTF_MOVE = 207;       // 通知移动
+message CsCmdSceneNtfMove {
+    uint64 account_id = 1;
+    uint32 map_id = 2;
+    uint32 scene_id = 3;
+    uint32 x = 4;
+    uint32 y = 5;
+    uint32 old_x = 6;
+    uint32 old_y = 7;
+};
+
+// SCENE_MOVE_REQ = 208;       // 移动
+message CsCmdSceneMoveReq {
+    uint32 map_id = 1;
+    uint32 scene_id = 2;
+    uint32 pos_x = 3;
+    uint32 pos_y = 4;
+};
+
+// SCENE_MOVE_RES = 209;       // 移动
+message CsCmdSceneMoveRes {
+    uint32 map_id = 1;
+    uint32 scene_id = 2;
+    uint32 pos_x = 3;
+    uint32 pos_y = 4;
+};

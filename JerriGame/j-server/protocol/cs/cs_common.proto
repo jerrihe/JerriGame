@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "./;cs";
+
+package cs;
+
+// 消息头
+message CsHead {
+    int32 cmd = 1;
+    int32 seq = 2;
+    int32 ret = 3;
+}
+
+// 消息包
+message CsPkg {
+    CsHead head = 1;
+    bytes body = 2;
+}
+
+//错误码通知
+message CsCmdNtfErrorCode {
+    int32 cmd = 1;
+    int32 err_code = 2;
+}

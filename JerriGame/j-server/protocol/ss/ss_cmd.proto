@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "./;ss";
+
+package ss;
+
+// 不必带SS_CMD，因为这个文件就是定义SS_CMD的，会自动加上ss前缀
+enum SS_CMD {
+    UNKNOWN = 0;
+
+    KICK_ACCOUNT_REQ = 1;
+    KICK_ACCOUNT_RES = 2;
+
+    REGISTER_SERVER_REQ = 3;
+    REGISTER_SERVER_RES = 4;
+}

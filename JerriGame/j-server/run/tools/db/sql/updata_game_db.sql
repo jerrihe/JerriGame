@@ -1,0 +1,1 @@
+ALTER TABLE `guild` ADD COLUMN `mail_times` INT(11) NOT NULL DEFAULT 0 COMMENT '邮件次数';

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "./;cs";
+
+package cs;
+
+enum ERR_CODE {
+    UNKNOW                        = 0;
+
+    SUCCESS                       = 1;
+    FAILED                        = 2;
+
+
+    // login
+    LOGIN_FAILED                  = 101;    // 登录失败
+    LOGIN_INVALID_ACCOUNT         = 102;    // 无效的账号
+    LOGIN_ONLINE                  = 103;    // 账号已在线
+    LOGIN_NEED_CREATE             = 104;    // 需要创建账号
+    CREATE_ACCOUNT_FAILED         = 105;    // 创建账号失败
+    KICKED                        = 106;    // 被踢下线
+    CREATE_EXITE_ACCOUNT          = 107;    // 已经存在的账号
+};

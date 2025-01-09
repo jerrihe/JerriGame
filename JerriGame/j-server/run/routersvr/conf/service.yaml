@@ -1,0 +1,7 @@
+Network:
+    ClientService: "192.168.31.97:8003"
+RelationService:
+    # 服务名字: 地址列表，服务名字要跟 protocol/ss/ss_type.proto:ServiceType 一一对应 
+    RouterSvr: ["192.168.31.97:8001"]
+ServerInfo:
+    ServerID: 1
