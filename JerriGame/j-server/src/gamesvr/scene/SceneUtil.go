@@ -166,9 +166,9 @@ func GetPathWithDistances(path []Pos) ([]Pos, float64) {
 
 func GetPath(startXActual, startYActual, endXActual, endYActual float64) ([]Pos, float64) {
 	// 启发式函数
-	heuristic := Manhattan
+	heuristic := Chebyshev
 	// 启发式函数距离
-	heuristicDistance := ManhattanDistance
+	heuristicDistance := ChebyshevDistance
 
 	startX, startY := ToGridCoords(startXActual, startYActual)
 	endX, endY := ToGridCoords(endXActual, endYActual)
